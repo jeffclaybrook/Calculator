@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    background: #000;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1)), url(background.webp);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.calculator {
+    width: 20rem;
+    height: 33rem;
+    background: #eaedef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .325rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.result {
+    height: 7.5rem;
+}
+
+.history {
+    text-align: right;
+    height: 1.25rem;
+    margin: 0 1.25rem;
+    padding-top: 1.25rem;
+    font-size: 1rem;
+    color: #919191;
+}
+
+.output {
+    text-align: right;
+    height: 3.75rem;
+    margin: .625rem 1.25rem;
+    font-size: 1.875rem;
+}
+
+.keyboard {
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.operator, .number, .empty {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.operator {
+    background: #dbdfe1;
+}
+
+.number, .operator {
+    cursor: pointer;
+}
+
+.operator:active, .number:active {
+    font-size: .875rem;
+    transform: scale(1.02);
+}
+
+.operator:focus, .number:focus, .empty:focus {
+    outline: 0;
+}
+
+button:nth-child(4) {
+    font-size: 1.25rem;
+    background: #20b2aa;
+}
+
+button:nth-child(8) {
+    font-size: 1.25rem;
+    background: #ffa500;
+}
+
+button:nth-child(12) {
+    font-size: 1.25rem;
+    background: #f08080;
+}
+
+button:nth-child(16) {
+    font-size: 1.25rem;
+    background: #7d93e0;
+}
+
+button:nth-child(20) {
+    font-size: 1.25rem;
+    background: #9477af;
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        top: 2rem;
+        transform: translate(-50%);
+        width: calc(100% - 1rem);
+    }
+}
